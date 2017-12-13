@@ -36,3 +36,17 @@ Announcements related to this course, since publishing:
 - microsoft/dotnet & microsoft/dotnet-nightly image tags are now visually grouped by OS & CPU architecture https://github.com/dotnet/announcements/issues/27
 - dotnet restore is now an implicit command, i.e. when you run dotnet build it will perform a restore if needed. That said, `dotnet restore` is still worthwhile to explicitly control when package restore occurs, for example to optimize the speed of building images as discussed in the courses. https://github.com/dotnet/announcements/issues/23
 
+
+Notes
+
+Run ls -alR ==> Recursively list out all the directories, this is a nice way to check which file are copied in.  However if caching is enable then it will not run second time.
+
+How to run the docker file interactively to see what is inside the container
+    docker run --rm -it --entrypoint=bash testing
+
+docker run --rm -it -p 8080:80 testing
+
+docker image ls ==> shows all the images
+docker ps ==> shows the current running container
+
+docker image prune ==> remove all dangling images.
